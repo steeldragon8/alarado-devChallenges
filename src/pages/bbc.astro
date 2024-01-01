@@ -1,22 +1,22 @@
 ---
 import BBCLayout from '../layouts/BBCLayout.astro';
 import Card from '../components/Card.astro';
-import { Image } from 'astro:assets';
+/* import { Image } from 'astro:assets'; */
 import hero from '../assets/hero-image-business-card.png';
-import avatar from '../assets/avatar-image-business-card.png';
+import user from '../assets/avatar-image-business-card.png';
 ---
 
 <BBCLayout title="Business Card Blog">
 	<main>
 		<section class="h-screen flex items-center justify-center">
 			<Card
-				image={hero}
+				hero={hero}
 				href="#"
 				title="Perfect solution for small business"
 				body="Small businesses need to generate leads to grow. You can use tools like Ringy."
 				name="Amy Burgess"
 				occupation="Customer Manger, Solution Oy"
-				avatar={avatar}
+				avatar={user}
 			/>
 		</section>		
 	</main>

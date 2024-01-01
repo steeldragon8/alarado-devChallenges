@@ -1,25 +1,24 @@
 ---
 import { Image } from 'astro:assets';
 import overlay from '../assets/white-overlay.svg'
-import { imageMetadata } from 'astro/assets/utils';
 
 interface Props {
-	image: string;
+	hero: ImageMetadata;
 	title: string;
 	body: string;
 	href: string;
 	name: string;
 	occupation: string;
-	avatar: string;
+	avatar: ImageMetadata;
 }
 
-const { image, href, title, body, name, occupation, avatar } = Astro.props;
+const { hero, href, title, body, name, occupation, avatar } = Astro.props;
 ---
 
 <article class="w-3/5 md:w-1/3 bg-white rounded-xl shadow-sm overflow-hidden">
 	<a href={href}>		
 		<div class="relative overflow-hidden">
-			<Image src={image} alt={title} class='transition-all duration-500 ease-in-out hover:scale-110' />
+			<Image src={hero} alt={title} class='transition-all duration-500 ease-in-out hover:scale-110' />
 			<Image src={overlay} alt='' class='absolute left-0 -bottom-[1px] right-0 w-full' />
 		</div>
 
