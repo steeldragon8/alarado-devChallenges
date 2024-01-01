@@ -1,0 +1,32 @@
+---
+import { Image } from "astro:assets";
+import heroImage from "../assets/hero-image-simple-homepage.png";
+import DoneRingRound from "./icons/DoneRingRound.astro";
+---
+<section class="lg:h-[90vh] flex flex-col-reverse lg:flex-row lg:items-center gap-20 px-6 md:px-[58px] lg:px-0">
+    <article class="pb-20 lg:pb-0">
+        <h2 class="text-sm uppercase font-semibold text-customDarkGray dark:text-customLightGray mb-8">😎 &nbsp;&nbsp; Simple way to communicate</h2>
+        <h1 class="leading-tight w-4/5 md:w-full">Actions for Accessibility in Design</h1>
+        <p class="font-medium text-customDarkGray/70 dark:text-customGray mt-8 md:w-3/5 lg:w-full">The fastest way to build and deploy websites with resusable components.</p>
+
+        <div class="buttons mt-6">
+            <a href="#" class="text-white uppercase bg-customBlue transition-colors duration-500 ease-linear hover:bg-customBlue/85">get started</a>
+            <a href="#" class="text-customBlue">
+                <span class="border-b-2 border-customBlue hover:font-semibold">Get live demo</span>
+            </a>
+        </div>
+
+        <ul class="notes mt-8">
+            <li>
+                <DoneRingRound />
+                No credit card required</li>
+            <li>
+                <DoneRingRound />
+                No software to install</li>
+        </ul>
+    </article>
+
+    <article class="flex items-center justify-center pt-12 lg:pt-0">
+        <Image src={heroImage} alt="Hero image" class="w-full md:w-3/5 lg:w-full" />
+    </article>
+</section>

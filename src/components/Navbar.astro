@@ -1,0 +1,71 @@
+---
+
+---
+
+<nav>
+    <ul
+        class="hidden md:flex gap-8 text-sm font-medium text-customDarkGray/70 dark:text-customGray"
+    >
+        <li>
+            <a href="#" class="text-customBlack transition-colors duration-500 ease-linear hover:text-customBlack dark:text-customLightGray dark:hover:text-customLightGray">About us</a>
+        </li>
+        <li>
+            <a href="#" class="transition-colors duration-500 ease-linear hover:text-customBlack dark:hover:text-customLightGray">Product</a>
+        </li>
+        <li>
+            <a href="#" class="transition-colors duration-500 ease-linear hover:text-customBlack dark:hover:text-customLightGray">Resource</a>
+        </li>
+        <li>
+            <a href="#" class="transition-colors duration-500 ease-linear hover:text-customBlack dark:hover:text-customLightGray">Contact</a>
+        </li>
+    </ul>
+
+    <input type="checkbox" id="menu" class="peer hidden" />
+
+    <label
+        for="menu"
+        class="absolute bg-customLightGray rounded-md bg-open w-8 h-8 bg-cover bg-center cursor-pointer peer-checked:bg-close transition-all duration-500 ease-linear z-50 md:hidden top-6 right-8"
+    ></label>
+
+    <div
+        class="fixed top-0 right-0 bottom-0 w-4/6 bg-customLightGray dark:bg-customBlack translate-x-full peer-checked:translate-x-0 shadow-xl border-l dark:border-l-customLightGray transition-transform duration-500 ease-linear z-40 md:static md:bg-none md:translate-x-0"
+    >
+        <ul
+            class="absolute inset-x-0 top-24 p-12 bg-customLightGray dark:bg-customBlack w-[90%] mx-auto rounded-md h-max text-center grid gap-12 text-5xl font-semibold dark:text-customGray text-customDarkGray/70 md:w-max md:bg-transparent md:p-0 md:grid-flow-col md:static md:hidden"
+        >
+            <li>
+                <a href="#" class="text-customBlack dark:text-customLightGray">About us</a>
+            </li>
+
+            <li>
+                <a href="#">Product</a>
+            </li>
+
+            <li>
+                <a href="#">Resource</a>
+            </li>
+
+            <li>
+                <a href="#">Contact</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<style>
+    .peer:checked~.peer-checked\:translate-x-0 {
+        --tw-translate-x: 0px;
+        transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+            rotate(var(--tw-rotate)) skewX(var(--tw-skew-x))
+            skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x))
+            scaleY(var(--tw-scale-y));
+    }
+
+    .peer:checked~.peer-checked\:bg-close {
+        background-image: url("../assets/close.svg");
+    }
+
+    .bg-open {
+        background-image: url("../assets/open.svg");
+    }
+</style>

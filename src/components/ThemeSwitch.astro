@@ -1,0 +1,31 @@
+---
+import Moon from "./icons/Moon.astro";
+import Sun from "./icons/Sun.astro";
+/* import "../util"; */
+---
+
+<input type="checkbox" id="switch" class="peer hidden" data-id="switch-theme" />
+
+<label
+    for="switch"
+    class="w-[42px] h-5 p-[3px] hidden md:flex items-center justify-between cursor-pointer bg-customDarkGray rounded-full peer-checked:bg-customGray/30"
+>
+    <Moon
+        class="rounded-full size-[16px] text-customLightGray transition-all duration-500 ease-linear peer-checked:change-moon"
+    />
+    <Sun
+        class="bg-customLightGray text-customDarkGray rounded-full size-[16px] transition-all duration-500 ease-linear peer-checked:change-sun"
+    />
+</label>
+
+<style>
+    .peer:checked ~ label .peer-checked\:change-sun {
+        background-color: transparent;
+        color: #f2f9fe;
+    }
+
+    .peer:checked ~ label .peer-checked\:change-moon {
+        background-color: #f2f9fe;
+        color: #223344;
+    }
+</style>
